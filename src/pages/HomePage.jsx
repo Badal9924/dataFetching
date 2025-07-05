@@ -26,7 +26,7 @@ function HomePage() {
         return (
           <div
             key={index}
-            className="max-w-[300px] border-2 border-solid pt-[33px] pl-[8px] pr-[8px] pb-[8px] rounded relative"
+            className="max-w-[300px] border-2 border-solid pt-[33px] pl-[8px] pr-[8px] pb-[8px] rounded relative max-h-[400px]"
           >
             <h2 className="text-xl font-bold">{eachCard.title}</h2>
             <p>{eachCard.body}</p>
