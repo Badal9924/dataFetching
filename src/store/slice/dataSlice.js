@@ -14,11 +14,17 @@ const dataSlice = createSlice({
     name: "data",
     initialState: {
         list: [],
+        postPerPage: 6,
+        currentPage: 1,
         loading: false
     },
     reducers: {
-        removeCard(state,action){
-            state.list.splice(action.payload,1)
+        setPage(state,action) {
+            state.currentPage = action.payload
+        },
+
+        removeCard(state, action) {
+            state.list.splice(action.payload, 1)
         }
     },
     extraReducers: (builder) => {
@@ -32,6 +38,6 @@ const dataSlice = createSlice({
     }
 });
 
-export const { removeCard } = dataSlice.actions;
+export const { removeCard, setPage } = dataSlice.actions;
 
 export default dataSlice.reducer;
